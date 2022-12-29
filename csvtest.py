@@ -11,3 +11,7 @@ for i in df_sales["Customer_ID"]:
     if i in lst:
        n.append(i) 
 print(n)
+fjson_file = open('json_data/h_all_20221130_001.json', 'r', encoding="utf-8_sig")
+df=pd.read_json(fjson_file)#.transpose()
+dt= pd.DataFrame(df)
+print(df[df['name'].isin(['株式会社ＴＫＣ', '株式会社山本製作所'])].filter(["name","registratedNumber"]))
