@@ -36,10 +36,12 @@ json_load.extend(json_load5)
 data_count= len(json_load)
 print(f"data-count...{data_count}")
 
-#------------
-#json_file = open(f, 'r', encoding="utf-8_sig")
-#df=pd.read_json(json_file)#.transpose()
+#
+#df=pd.read_json(json_open)#.transpose()
 
-df=pd.json_normalize(json_load)
+#--------------------
+#
+#--------------------
+df= pd.json_normalize(json_load)
 dt= pd.DataFrame(df)
-print(df[df['name'].isin(['株式会社ＴＫＣ', '株式会社山本製作所'])].filter(["registratedNumber", "name", "address"]))
+print(df[df['name'].isin(['株式会社ＴＫＣ', '日本電産コパル株式会社', '株式会社山本製作所'])].filter(["registratedNumber", "name", "address"]))
