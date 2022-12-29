@@ -22,7 +22,7 @@ json_open5 = open(f5, 'r', encoding="utf-8_sig")
 json_load5 = json.load(json_open5)
 
 
-print("json_load", len(json_load))
+print("json_load1", len(json_load))
 print("json_load2", len(json_load2))
 print("json_load3", len(json_load3))
 print("json_load4", len(json_load4))
@@ -42,4 +42,4 @@ print(f"data-count...{data_count}")
 
 df=pd.json_normalize(json_load)
 dt= pd.DataFrame(df)
-print(df[df['name'].isin(['株式会社ＴＫＣ', '株式会社山本製作所'])].filter(["registratedNumber","name", "address"]))
+print(df[df['name'].isin(['株式会社ＴＫＣ', '株式会社山本製作所'])].filter(["registratedNumber", "name", "address"]))
