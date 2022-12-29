@@ -31,7 +31,7 @@ json_load.extend(json_load3)
 json_load.extend(json_load4)
 json_load.extend(json_load5)
 
-#print('株式会社サン企画' in json_load[1100].values())
+##print('株式会社サン企画' in json_load[1100].values())
 data_count= len(json_load)
 print(f"data-count...{data_count}")
 for j in json_load:
