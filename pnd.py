@@ -46,6 +46,7 @@ def getJsonData():
 #
 #--------------------
 def main():
+
     #
     d = pd.read_excel("tgt.xlsx", header=None, names=["id",])
     tgt = d["id"].values.tolist()
@@ -53,7 +54,6 @@ def main():
     #
     json_data = getJsonData()
     df = pd.json_normalize(json_data)
-    #dtf=df[df['name'].isin(['株式会社ＴＫＣ', '日本電産コパル株式会社', '株式会社山本製作所'])].filter(["registratedNumber", "name", "address"])
     rdf = df[df['registratedNumber'].isin(tgt)].filter(["registratedNumber", "name", "address"])
 
     #
